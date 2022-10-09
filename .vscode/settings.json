@@ -1,0 +1,11 @@
+{
+  "azureFunctions.postDeployTask": "npm install (functions)",
+  "azureFunctions.projectLanguage": "TypeScript",
+  "azureFunctions.projectRuntime": "~4",
+  "debug.internalConsoleOptions": "neverOpen",
+  "azureFunctions.deploySubpath": ".",
+  "editor.codeActionsOnSave": ["source.organizeImports", "source.fixAll"],
+  "editor.formatOnSave": true,
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "azureFunctions.funcCliPath": "./node_modules/.bin/func"
+}
