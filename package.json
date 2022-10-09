@@ -7,7 +7,7 @@
     "node": ""
   },
   "scripts": {
-    "build": "esbuild src/index.ts --outdir=dist --bundle --platform=node --target=esnext --external:@azure/functions-core --format=cjs --minify --sourcemap --analyze",
+    "build": "esbuild src/index.ts --outdir=dist --bundle --platform=node --target=esnext --external:@azure/functions-core --format=cjs --minify && cp package.json dist",
     "watch": "tsc -w",
     "prestart": "bun run build",
     "start": "func start --verbose",
