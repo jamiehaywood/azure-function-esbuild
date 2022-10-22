@@ -9,6 +9,6 @@ app.http("httpTrigger", {
 });
 
 // app.timer("timerTrigger", {
-//   schedule: "*/10 * * * * *",
+//   schedule: "*/5 * * * * *",
 //   handler: timerTrigger,
 // });
