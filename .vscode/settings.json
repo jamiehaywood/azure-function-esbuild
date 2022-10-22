@@ -1,11 +1,8 @@
 {
+  "azureFunctions.deploySubpath": ".",
   "azureFunctions.postDeployTask": "npm install (functions)",
   "azureFunctions.projectLanguage": "TypeScript",
-  "azureFunctions.projectRuntime": "~4",
+  "azureFunctions.projectRuntime": "~3",
   "debug.internalConsoleOptions": "neverOpen",
-  "azureFunctions.deploySubpath": ".",
-  "editor.codeActionsOnSave": ["source.organizeImports", "source.fixAll"],
-  "editor.formatOnSave": true,
-  "typescript.preferences.importModuleSpecifier": "relative",
-  "azureFunctions.funcCliPath": "./node_modules/.bin/func"
+  "azureFunctions.preDeployTask": "npm prune (functions)"
 }

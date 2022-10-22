@@ -6,19 +6,26 @@
       "command": "host start",
       "problemMatcher": "$func-node-watch",
       "isBackground": true,
-      "dependsOn": "bun build (functions)"
+      "dependsOn": "npm build (functions)"
     },
     {
       "type": "shell",
-      "label": "bun build (functions)",
-      "command": "bun run build",
-      "dependsOn": "bun install (functions)",
+      "label": "npm build (functions)",
+      "command": "npm run build",
+      "dependsOn": "npm install (functions)",
       "problemMatcher": "$tsc"
     },
     {
       "type": "shell",
-      "label": "bun install (functions)",
-      "command": "bun install"
+      "label": "npm install (functions)",
+      "command": "npm install"
+    },
+    {
+      "type": "shell",
+      "label": "npm prune (functions)",
+      "command": "npm prune --production",
+      "dependsOn": "npm build (functions)",
+      "problemMatcher": []
     }
   ]
 }
