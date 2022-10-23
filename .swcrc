@@ -2,11 +2,7 @@
   "$schema": "https://json.schemastore.org/swcrc",
 
   "jsc": {
-    "parser": {
-      "syntax": "typescript",
-      "dynamicImport": false,
-      "decorators": false
-    },
+    "parser": { "syntax": "typescript" },
     "target": "es2022"
   },
   "minify": false,
