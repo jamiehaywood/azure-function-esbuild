@@ -7,7 +7,7 @@
       "dynamicImport": false,
       "decorators": false
     },
-    "target": "es5"
+    "target": "es2022"
   },
   "minify": false,
   "module": { "type": "commonjs" }
