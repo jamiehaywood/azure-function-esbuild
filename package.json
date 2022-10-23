@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "npx swc ./src -d dist -D",
+    "build": "npx swc ./src -d dist -D --config-file .swcrc",
     "watch": "tsc -w",
     "prestart": "npm run build",
     "start": "func start",
