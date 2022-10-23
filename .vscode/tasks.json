@@ -6,12 +6,15 @@
       "command": "host start",
       "problemMatcher": "$func-node-watch",
       "isBackground": true,
-      "dependsOn": "npm build (functions)"
+      "dependsOn": "npm build (functions)",
+      "options": {
+        "cwd": "${workspaceFolder}/dist"
+      }
     },
     {
       "type": "shell",
       "label": "npm build (functions)",
-      "command": "npm run build",
+      "command": "npm run build -- -s ",
       "dependsOn": "npm install (functions)",
       "problemMatcher": "$tsc"
     },
