@@ -3,7 +3,7 @@
 
   "jsc": {
     "parser": { "syntax": "typescript" },
-    "target": "es2016"
+    "target": "es2022"
   },
   "minify": false,
   "module": { "type": "commonjs" }
