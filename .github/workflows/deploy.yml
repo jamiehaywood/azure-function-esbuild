@@ -3,6 +3,8 @@ on:
   push:
     branches: [master]
 
+env:
+  AZURE_FUNCTION_APP_NAME: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
 jobs:  
   deploy:
     runs-on: ubuntu-latest
@@ -27,10 +29,13 @@ jobs:
       - name: 'Run Azure Functions Action'
         uses: Azure/functions-action@v1
         with:
-          app-name: azure-func-test
+          app-name: ${{secrets.AZURE_FUNCTION_APP_NAME}}
           package: dist
           publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
 
-      - name: Check if function is up
-        run: curl https://azure-func-test.azurewebsites.net/api/httpfunc
+      - name: Check if httpfunc function is up
+        run: curl https://$AZURE_FUNCTION_APP_NAME.azurewebsites.net/api/httpfunc
+      
+      - name: Check if httpfunc2 function is up
+        run: curl https://$AZURE_FUNCTION_APP_NAME.azurewebsites.net/api/httpfunc2
           
