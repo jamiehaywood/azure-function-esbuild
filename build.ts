@@ -1,7 +1,7 @@
 import esbuild from "esbuild";
 import { copy } from "esbuild-plugin-copy";
 
-import { readdir, mkdir } from "fs/promises";
+import { readdir, mkdir, readFile } from "fs/promises";
 import { rmSync } from "fs";
 import path from "path";
 async function build() {
@@ -29,6 +29,9 @@ async function build() {
       outdir,
       bundle: true,
       minify: true,
+      platform: "node",
+      treeShaking: true,
+      target: [`node${await readFile(".nvmrc", { encoding: "utf-8" })}`],
       sourcemap,
       watch: false,
       plugins: [
