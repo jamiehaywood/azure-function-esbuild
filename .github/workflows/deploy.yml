@@ -30,4 +30,7 @@ jobs:
           app-name: azure-func-test
           package: dist
           publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
+
+      - name: Check if function is up
+        run: curl https://azure-func-test.azurewebsites.net/api/httpfunc
           
