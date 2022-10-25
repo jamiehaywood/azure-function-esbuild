@@ -34,8 +34,8 @@ jobs:
           publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
 
       - name: Check if httpfunc function is up
-        run: curl "https://${AZURE_FUNCTION_APP_NAME}.azurewebsites.net/api/httpfunc"
+        run: curl "https://$(AZURE_FUNCTION_APP_NAME).azurewebsites.net/api/httpfunc"
       
       - name: Check if httpfunc2 function is up
-        run: curl "https://${AZURE_FUNCTION_APP_NAME}.azurewebsites.net/api/httpfunc2"
+        run: curl "https://$(AZURE_FUNCTION_APP_NAME).azurewebsites.net/api/httpfunc2"
           
