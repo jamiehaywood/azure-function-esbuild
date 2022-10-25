@@ -14,7 +14,7 @@
     {
       "type": "shell",
       "label": "npm build (functions)",
-      "command": "npm run build -- -s ",
+      "command": "npm run build:sourcemap",
       "dependsOn": "npm install (functions)",
       "problemMatcher": "$tsc"
     },
