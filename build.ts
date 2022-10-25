@@ -7,7 +7,7 @@ import path from "path";
 async function build() {
   const sourcemap = !!process.argv[2];
 
-  const buildDir = "lib";
+  const buildDir = "dist";
 
   rmSync(buildDir, { recursive: true, force: true });
   await mkdir(buildDir).catch(() => {}); // catch and do nothing if dir already exists
