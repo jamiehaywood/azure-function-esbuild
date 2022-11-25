@@ -6,7 +6,7 @@ export default async (context: Context, req: HttpRequest): Promise<void> => {
   const name = req.query.name || (req.body && req.body.name);
   const responseMessage = name
     ? "Hello, " + name + ". This HTTP triggered function executed successfully."
-    : `The time is ${Dayjs().unix()} UNIX time`;
+    : `The time is ${Dayjs().toISOString()} ISO time`;
 
   context.res = {
     // status: 200, /* Defaults to 200 */
